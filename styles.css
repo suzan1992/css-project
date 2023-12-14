@@ -1,0 +1,422 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  padding: 0 20px;
+  /* width: 100%; */
+  /* max-width: 1200px; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav li {
+  list-style: none;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav li:hover {
+  color: black;
+  font-weight: bold;
+  transition: color 2s ease;
+}
+.banner-content-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 80px 20px;
+  background-color: #007bff;
+  color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.banner {
+  background-color: #007bff;
+}
+
+.banner h1 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.banner p {
+  font-size: 15px;
+  color: #fff;
+  max-width: 600px;
+  margin: 0;
+}
+
+.circle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px; /* Adjust the margin as needed */
+}
+
+.circle {
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  background-color: gray;
+  margin: 0 10px;
+  position: absolute;
+  animation: rotateHorizontal 1s linear infinite,
+    rotateVertical 5s linear infinite;
+}
+
+.circle:nth-child(2) {
+  background-color: #efefef;
+  animation: rotateHorizontalReverse 5s linear infinite,
+    rotateVerticalReverse 10s linear infinite;
+}
+
+
+@keyframes rotateHorizontal {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes rotateVertical {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+@keyframes rotateHorizontalReverse {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(-360deg);
+  }
+}
+
+@keyframes rotateVerticalReverse {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(-360deg);
+  }
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 12px;
+  text-decoration: none;
+  background-color: white;
+  color: #007bff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 10px 0;
+}
+
+.cta-button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.banner img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about {
+  background-color: #eee;
+}
+
+.about-content-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 80px 20px;
+  color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about-content {
+  /* display: flex;
+        flex-direction: column;
+        justify-content: center; */
+}
+
+.about h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.services {
+}
+
+.service-content-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  padding: 0 20px 50px;
+  color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.service i {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.service h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 1em;
+  color: #555;
+}
+
+.section-heading {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.section-heading h2 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.portfolio-section-heading {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 25px;
+  color: #333;
+}
+
+.portfolio-info-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 40px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.portfolio-section {
+  background-color: #efefef;
+  padding: 30px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.project-content {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.project h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.project p {
+  font-size: 1em;
+  color: #555;
+}
+
+.contact-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.contact-form {
+  display: grid;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+}
+.contact-form h2 {
+  text-align: center;
+}
+.form-grp {
+  margin-bottom: 20px;
+}
+.form-grp label {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+.form-grp input,
+.form-grp textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.form-grp textarea {
+  resize: vertical;
+}
+.form-grp button {
+  display: block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2em;
+  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+}
+contact-info {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+contact-info p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+contact-info {
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 500px) {
+  .banner-content-info {
+    display: block;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .about-content-info,
+  .portfolio-info-content,
+  .contact-section {
+    display: block;
+  }
+
+  .about h2 {
+    margin-top: 20px;
+  }
+
+  .service-content-info {
+    display: block;
+  }
+  .service {
+    margin-bottom: 20px;
+  }
+  contact-info {
+    margin: 10px 60px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .banner-content-info,
+  .about-content-info,
+  .service-content-info,
+  .portfolio-info-content,
+  .contact-section {
+    display: block;
+  }
+  .service {
+    margin-bottom: 20px;
+  }
+  contact-info {
+    margin: 50px auto 0;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .banner-content-info,
+  .about-content-info,
+  .service-content-info,
+  .portfolio-info-content,
+  .contact-section {
+    display: grid;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .banner-content-info,
+  .about-content-info,
+  .service-content-info,
+  .portfolio-info-content,
+  .contact-section {
+    display: grid;
+  }
+}
